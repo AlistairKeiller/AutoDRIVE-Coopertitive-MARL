@@ -1,0 +1,8 @@
+{
+    "name": "Python",
+    "image": "mcr.microsoft.com/devcontainers/python:latest",
+    // "runArgs": [
+    //     "--platform=linux/amd64"
+    // ],
+    "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh"
+}
