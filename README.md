@@ -15,6 +15,10 @@
       > ***Note:*** *It may take several minutes to import and load the project for the first time. Please be patient.*
 
 ### Training
+0. (Optional) Open the repository in a devcontainer:
+  Install [dev containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+  Then Rebuild and Reopen in containers (in the vscode command palette, opened by ctrl/command+shift+p by default)
+
 1. Start the training by sourcing the appropriate training configuration (using relative/global path) and `run-id`.
   
     ```bash
