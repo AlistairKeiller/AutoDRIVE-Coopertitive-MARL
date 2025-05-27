@@ -1,1 +1,1 @@
-uv run -- mlagents-learn --resume
+uv run -- mlagents-learn Training\ Configurations/F1TenthRacing.yaml --run-id=run1
