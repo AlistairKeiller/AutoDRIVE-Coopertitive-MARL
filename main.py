@@ -8,7 +8,7 @@ from gym_unity.envs import UnityToGymWrapper
 
 
 def main():
-    unity_env = UnityEnvironment("./env/AutoDRIVE.x86_64", no_graphics = True)
+    unity_env = UnityEnvironment("./env/AutoDRIVE.x86_64")
     env = UnityToGymWrapper(unity_env, 0, uint8_visual=True)
 
     checkpoint_callback = CheckpointCallback(
@@ -33,14 +33,10 @@ def main():
         prioritized_replay=False,
         policy_kwargs=dict(dueling=True),
         verbose=1,
-        tensorboard_log="./sb3_logs/"
+        tensorboard_log="./sb3_logs/",
     )
 
-    model.learn(
-        total_timesteps=1000000,
-        callback=checkpoint_callback,
-        log_interval=20
-    )
+    model.learn(total_timesteps=1000000, callback=checkpoint_callback, log_interval=20)
 
     print("Saving model to unity_model.zip")
     model.save("unity_model")
