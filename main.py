@@ -8,7 +8,7 @@ from gym_unity.envs import UnityToGymWrapper
 
 
 def main():
-    unity_env = UnityEnvironment("./AutoDRIVE.x86_64", no_graphics = True)
+    unity_env = UnityEnvironment("./env/AutoDRIVE.x86_64", no_graphics = True)
     env = UnityToGymWrapper(unity_env, 0, uint8_visual=True)
 
     checkpoint_callback = CheckpointCallback(
